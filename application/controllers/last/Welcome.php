@@ -30,7 +30,7 @@ class Welcome extends Application {
         $source = $this->quotes->last();
         $authors = array();
         $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where'],'what' => $source['what']);
-        $this->data['authors'] = $authors;
+        $this->data = array_merge($authors[0], $this->data);
 
         $this->render();
     }
