@@ -13,7 +13,7 @@
  *
  * ------------------------------------------------------------------------
  */
-class First extends Application {
+class Last extends Application {
 
     function __construct() {
         parent::__construct();
@@ -26,7 +26,7 @@ class First extends Application {
     function index() {
         $this->data['pagebody'] = 'homepage';    // this is the view we want shown
         // build the list of authors, to pass on to our view
-        $source = $this->quotes->first();
+        $source = $this->quotes->last();
         $authors = array();
         $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where']);
         $this->data['authors'] = $authors;
@@ -36,5 +36,5 @@ class First extends Application {
 
 }
 
-/* End of file First.php */
-/* Location: application/controllers/First.php */
+/* End of file Last.php */
+/* Location: application/controllers/Last.php */
