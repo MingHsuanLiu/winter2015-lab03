@@ -29,7 +29,7 @@ class Welcome extends Application {
         // build the list of authors, to pass on to our view
         $source = $this->quotes->last();
         $authors = array();
-        $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where']);
+        $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where'],'what' => $source['what']);
         $this->data['authors'] = $authors;
 
         $this->render();
