@@ -1,15 +1,16 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
- * Our Navbar to First. Show the author pictures. Clicking on one should show their quote.
+ * Our Navbar to Last. Show the author pictures. Clicking on one should show their quote.
  * Our quotes model has been autoloaded, because we use it everywhere.
  * 
- * controllers/First.php
+ * controllers/last/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
@@ -37,4 +38,4 @@ class Welcome extends Application {
 }
 
 /* End of file Last.php */
-/* Location: application/controllers/Last.php */
+/* Location: application/controllers/last/Welcome.php */
