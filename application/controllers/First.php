@@ -1,10 +1,11 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  * Our Navbar to First. Show the author pictures. Clicking on one should show their quote.
  * Our quotes model has been autoloaded, because we use it everywhere.
@@ -24,12 +25,23 @@ class First extends Application {
     //-------------------------------------------------------------
 
     function index() {
-        $this->data['pagebody'] = 'homepage';    // this is the view we want shown
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
         $source = $this->quotes->first();
         $authors = array();
-        $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where']);
-        $this->data['authors'] = $authors;
+        $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where'],'what' => $source['what']);
+        $this->data = array_merge($authors[0], $this->data);
+
+        $this->render();
+    }
+
+    function zzz() {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        // build the list of authors, to pass on to our view
+        $source = $this->quotes->get('1');
+        $authors = array();
+        $authors[] = array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where'],'what' => $source['what']);
+        $this->data = array_merge($authors[0], $this->data);
 
         $this->render();
     }
